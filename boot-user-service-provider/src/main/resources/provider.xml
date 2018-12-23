@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--1、指定当期服务/应用的名字（同样的服务名字相同，不要和别的服务同名）-->
+    <dubbo:application name="boot-user-service-provider"/>
+
+    <!--2、指定注册中心的位置-->
+    <!--<dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>-->
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"></dubbo:registry>
+
+    <!--3、指定通信规则，用dubbo协议在20880端口暴露服务-->
+    <dubbo:protocol name="dubbo" port="20880" />
+
+    <!--
+        4、暴露服务
+    -->
+    <dubbo:service interface="com.mqf.cn.service.UserService" ref="userServiceImpl"/>
+    <bean class="com.mqf.cn.service.impl.UserServiceImpl" id="userServiceImpl"></bean>
+
+    <!--注册监控中心-->
+    <dubbo:monitor protocol="registry"/>
+
+</beans>
