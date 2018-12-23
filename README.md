@@ -1,4 +1,10 @@
 # dubbo
+#### common-service 基本的配置
+#### user-service-provider 服务提供者（普通maven实现）
+#### order-service-customer 服务消费者（普通maven实现）
+#### boot-user-service-provider 服务提供者（Spring Boot实现）
+#### boot-order-service-customer 服务消费者（Spring Boot实现）
+
 ### 安装zookeeper
    - 解压 zookeeper-3.4.11.tar.gz 包
    - 修改 conf/zoo_sample.cfg 为zoo.cf ,
@@ -16,9 +22,8 @@
    - target 文件夹解压 dubbo-monitor-simple-2.0.0-assembly.tar.gz 到当前文件夹
    - 使用 dubbo-monitor-simple-2.0.0\assembly.bin\start.bat 启动监控中心
    - 默认访问地址是 localhost:8080
-    
-#### common-service 基本的配置
-#### user-service-provider 服务提供者（普通maven实现）
-#### order-service-customer 服务消费者（普通maven实现）
-#### boot-user-service-provider 服务提供者（Spring Boot实现）
-#### boot-order-service-customer 服务消费者（Spring Boot实现）
+### SpringBoot 与dubbo 整合的三种方式
+    1）导入 dubbo-starter，在 application.properties 配置属性，
+        使用 @Service【暴露服务】（provider方）和  @Reference【引用】（customer方）@EnableDubbo 开启基于注解的dubbo功能
+    2）保留 dubbo xml 配置文件, 不使用  @Service
+    3）使用注解 API 方式
