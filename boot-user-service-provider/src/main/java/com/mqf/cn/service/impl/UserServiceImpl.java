@@ -8,10 +8,11 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-@Service //暴露
-@Component
+//@Service //暴露
+//@Component
 public class UserServiceImpl implements UserService {
 
+	@Override
 	public List<UserAddress> getUserAddressList(String userId) {
 		System.out.println("UserServiceImpl.....old...");
 		// TODO Auto-generated method stub

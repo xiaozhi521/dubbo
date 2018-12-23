@@ -21,8 +21,8 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-//	@Autowired
-	@Reference
+	@Autowired
+//	@Reference
 	UserService userService;
 
 	public List<UserAddress> initOrder(String userId) {
