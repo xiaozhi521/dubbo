@@ -23,9 +23,10 @@
    - 使用 dubbo-monitor-simple-2.0.0\assembly.bin\start.bat 启动监控中心
    - 默认访问地址是 localhost:8080
 ### SpringBoot 与dubbo 整合的三种方式
-    1）导入 dubbo-starter，在 application.properties 配置属性，
+    -- 导入 dubbo-starter，在 application.properties 配置属性，
         使用 @Service【暴露服务】（provider方）和  @Reference【引用】（customer方）@EnableDubbo 开启基于注解的dubbo功能
-    2）保留 dubbo xml 配置文件, 不使用  @Service
-    3）使用注解 API 方式 
-  [http://dubbo.apache.org/zh-cn/docs/user/configuration/annotation.html]
+        
+   -- 保留 dubbo xml 配置文件, 不使用  @Service
+   
+   -- <a href="http://dubbo.apache.org/zh-cn/docs/user/configuration/annotation.html">使用注解 API 方式:</a>
       
