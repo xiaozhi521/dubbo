@@ -26,4 +26,5 @@
     1）导入 dubbo-starter，在 application.properties 配置属性，
         使用 @Service【暴露服务】（provider方）和  @Reference【引用】（customer方）@EnableDubbo 开启基于注解的dubbo功能
     2）保留 dubbo xml 配置文件, 不使用  @Service
-    3）使用注解 API 方式
+    3）使用注解 API 方式 
+      http://dubbo.apache.org/zh-cn/docs/user/configuration/annotation.html
