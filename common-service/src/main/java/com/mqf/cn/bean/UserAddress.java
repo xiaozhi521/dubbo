@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 /**
  * 用户地址
- * @author lfy
- *
  */
 public class UserAddress implements Serializable {
 	
